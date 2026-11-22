@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#FAF7F2">
-  <meta name="description" content="Silvia i Miguel · 11 de septiembre de 2027 · Valencia">
+  <meta name="description" content="Boda de Silvia i Miguel, 11 de septiembre de 2027. Horarios, ubicaciones y confirmación de asistencia.">
   <title>Silvia i Miguel | 11.09.2027</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -143,6 +143,28 @@
       .form-preview button,.form-preview .notice{grid-column:1}
       .place-card{padding:28px}
     }
+
+    .milestones{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:36px 0 0}
+    .milestones li{border-top:1px solid #cfa1aa;padding-top:16px}
+    .milestones time,.event-time,.schedule time{color:#814854;font-variant-numeric:tabular-nums}
+    .milestones h3{margin-top:8px}
+    .venues{align-items:stretch}
+    .venues .btn{margin-top:12px}
+    .bus{margin:30px auto 0;text-align:center;max-width:650px;padding:24px 0 0;border-top:1px solid #d7bbc0}
+    .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;grid-auto-rows:clamp(110px,18vw,225px)}
+    .gallery a{display:block;overflow:hidden;border-radius:10px}
+    .gallery a:first-child{grid-column:span 2;grid-row:span 2}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+    .gallery a:hover img,.gallery a:focus-visible img{transform:scale(1.035)}
+    #confirmacion .btn{margin-top:16px}
+    @media(max-width:700px){
+      .milestones,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .gallery{grid-auto-rows:clamp(125px,39vw,235px)}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .gallery img{transition:none}
+    }
   </style>
 </head>
 <body>
@@ -159,8 +181,8 @@
       <div class="links right">
         <a href="#lugar">Lugar</a>
         <a href="#confirmacion">Confirma</a>
-        <a href="#informacion">Información</a>
-        <a href="#regalo">Regalo</a>
+        <a href="#informacion">Autobús</a>
+        <a href="#galeria">Galería</a>
       </div>
     </nav>
   </header>
@@ -175,9 +197,9 @@
             <div class="pink-rule"></div>
             <p class="date">11 · 09 · 2027</p>
             <p class="place">Valencia</p>
-            <p class="tagline">Dos caminos, una historia y toda una vida por delante.</p>
+            <p class="tagline">Nos hará mucha ilusión celebrar este día con vosotros.</p>
             <div class="hero-actions">
-              <a class="btn" href="#confirmacion">Confirmar asistencia</a>
+              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeebEXEQDC6nk2bkUVZjhktCci7nBRdQmJw1t-4HDD3So008g/viewform" target="_blank" rel="noopener noreferrer">Confirmar asistencia</a>
               <a class="btn outline" href="#dia">Ver detalles</a>
             </div>
           </div>
@@ -193,100 +215,65 @@
           <div class="hero-photo">
             <img src="silvia-miguel-portada.webp" alt="Silvia y Miguel caminando de la mano entre palmeras">
           </div>
-          <div class="hero-badge">
-            <p>Nuestra boda</p>
-            <strong>Una celebración mediterránea</strong>
-          </div>
         </div>
       </div>
     </section>
+
 
     <section class="section alt" id="historia">
-      <div class="wrap two-col">
-        <div>
-          <p class="eyebrow">Capítulo favorito</p>
-          <h2>Nuestra historia</h2>
-          <p>Hay historias que merecen celebrarse. La nuestra nos ha traído hasta aquí, rodeados de las personas que queremos.</p>
-          <p>Nos encantará que forméis parte de este día tan especial y compartir con vosotros cada momento de esta nueva etapa.</p>
-          <p class="note">Este texto sigue siendo provisional. Cuando quieras, lo sustituimos por vuestra historia real.</p>
-        </div>
-        <div class="feature-photo">
-          <img src="silvia-miguel-portada.webp" alt="Silvia y Miguel paseando de la mano">
-        </div>
+      <div class="wrap">
+        <div class="section-heading"><h2>Nuestra historia</h2></div>
+        <ol class="milestones">
+          <li><time datetime="2022-12-04">4 de diciembre de 2022</time><h3>El Casino</h3></li>
+          <li><time datetime="2023-04-04">4 de abril de 2023</time><h3>Empezamos a vivir juntos</h3></li>
+          <li><time datetime="2026-03-19">19 de marzo de 2026</time><h3>La pedida</h3></li>
+          <li><time datetime="2027-09-11">11 de septiembre de 2027</time><h3>Nuestra boda</h3></li>
+        </ol>
       </div>
     </section>
-
     <section class="section" id="dia">
       <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">11 de septiembre de 2027</p>
-          <h2>El gran día</h2>
-          <p>Así imaginamos nuestra celebración. Compartiremos los horarios definitivos más adelante.</p>
-        </div>
+        <div class="section-heading"><h2>El gran día</h2></div>
         <div class="schedule">
-          <article class="tile"><div class="symbol">✧</div><h3>Ceremonia</h3><p>Hora por confirmar</p></article>
-          <article class="tile"><div class="symbol">❀</div><h3>Cóctel</h3><p>Hora por confirmar</p></article>
-          <article class="tile"><div class="symbol">☼</div><h3>Cena</h3><p>Hora por confirmar</p></article>
-          <article class="tile"><div class="symbol">✦</div><h3>Fiesta</h3><p>Hora por confirmar</p></article>
+          <article class="tile"><time datetime="12:00">12:00</time><h3>Ceremonia</h3><p>Santuario del Lluch</p></article>
+          <article class="tile"><time datetime="14:00">14:00</time><h3>Cóctel</h3><p>Masía de San Antonio</p></article>
+          <article class="tile"><time datetime="15:30">15:30</time><h3>Comida</h3><p>Masía de San Antonio</p></article>
+          <article class="tile"><span class="event-time">18:00–23:00</span><h3>Fiesta</h3><p>Masía de San Antonio</p></article>
         </div>
       </div>
     </section>
-
     <section class="section alt" id="lugar">
-      <div class="wrap two-col">
-        <div class="feature-photo">
-          <img src="silvia-miguel-portada.webp" alt="Ambiente mediterráneo para la boda">
+      <div class="wrap">
+        <div class="section-heading"><h2>Cómo llegar</h2></div>
+        <div class="two-col venues">
+          <article class="tile"><h3>Santuario del Lluch</h3><p>Alzira · Ceremonia</p><a class="btn outline" href="https://www.google.com/maps/search/?api=1&amp;query=Santuario+del+Lluch+Alzira" target="_blank" rel="noopener noreferrer">Ver santuario en el mapa</a></article>
+          <article class="tile"><h3>Masía de San Antonio</h3><p>Benifaió · Celebración</p><a class="btn outline" href="https://www.google.com/maps/search/?api=1&amp;query=Mas%C3%ADa+de+San+Antonio+Benifai%C3%B3" target="_blank" rel="noopener noreferrer">Ver masía en el mapa</a></article>
         </div>
-        <div class="place-card">
-          <p class="eyebrow">Dónde nos vemos</p>
-          <h2>El lugar</h2>
-          <p><strong>Valencia, España</strong></p>
-          <p>Muy pronto compartiremos la dirección exacta, el mapa y cómo llegar. Queremos celebrar este día en un entorno luminoso, acogedor y muy nuestro.</p>
-          <p class="note">Todavía no hemos introducido ninguna finca ni dirección definitiva.</p>
-        </div>
+        <article class="bus" id="informacion">
+          <h3>Autobús</h3>
+          <p>La salida será desde la Plaza del Reino de Alzira, con parada en el Santuario del Lluch y continuación a la Masía de San Antonio. El regreso será a la Plaza del Reino.</p>
+          <p>Publicaremos aquí los horarios. Puedes solicitar tu plaza al confirmar la asistencia.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Pla%C3%A7a+del+Regne+Alzira" target="_blank" rel="noopener noreferrer">Ver punto de salida</a>
+        </article>
       </div>
     </section>
-
+    <section class="section" id="galeria">
+      <div class="wrap">
+        <div class="section-heading"><h2>Galería</h2></div>
+        <div class="gallery"><a href="assets/foto-1.webp"><img src="assets/foto-1.webp" alt="Silvia i Miguel, foto 1 de la galería" loading="lazy"></a>
+<a href="assets/foto-2.webp"><img src="assets/foto-2.webp" alt="Silvia i Miguel, foto 2 de la galería" loading="lazy"></a>
+<a href="assets/foto-3.webp"><img src="assets/foto-3.webp" alt="Silvia i Miguel, foto 3 de la galería" loading="lazy"></a>
+<a href="assets/foto-4.webp"><img src="assets/foto-4.webp" alt="Silvia i Miguel, foto 4 de la galería" loading="lazy"></a>
+<a href="assets/foto-5.webp"><img src="assets/foto-5.webp" alt="Silvia i Miguel, foto 5 de la galería" loading="lazy"></a>
+<a href="assets/foto-6.webp"><img src="assets/foto-6.webp" alt="Silvia i Miguel, foto 6 de la galería" loading="lazy"></a>
+<a href="assets/foto-7.webp"><img src="assets/foto-7.webp" alt="Silvia i Miguel, foto 7 de la galería" loading="lazy"></a></div>
+      </div>
+    </section>
     <section class="section soft" id="confirmacion">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Nos hará mucha ilusión verte</p>
-          <h2>Confirma tu asistencia</h2>
-          <p>Estamos preparando el formulario de confirmación para que puedas responder en unos segundos.</p>
-        </div>
-        <form class="form-preview" onsubmit="event.preventDefault(); alert('Este formulario todavía es una demostración. No se ha enviado ni guardado ningún dato.');">
-          <label>Nombre y apellidos<input type="text" placeholder="Tu nombre" required></label>
-          <label>¿Vendrás?<select required><option value="">Selecciona una opción</option><option>Sí, allí estaré</option><option>No podré asistir</option></select></label>
-          <label>Acompañante<input type="text" placeholder="Si procede"></label>
-          <label>Alergias o intolerancias<input type="text" placeholder="Si procede"></label>
-          <button class="btn" type="submit">Confirmar (demostración)</button>
-          <p class="notice">Importante: este formulario es solo visual. Todavía no envía ni guarda las respuestas. Lo conectaremos a un servicio antes de compartir la web con los invitados.</p>
-        </form>
-      </div>
-    </section>
-
-    <section class="section alt" id="informacion">
-      <div class="wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Todo lo que necesitas saber</p>
-          <h2>Información práctica</h2>
-          <p>Esta sección nos servirá para añadir los detalles útiles cuando los tengamos cerrados.</p>
-        </div>
-        <div class="info">
-          <article><h3>Alojamiento</h3><p>Compartiremos opciones para quienes necesiten quedarse a dormir.</p></article>
-          <article><h3>Cómo llegar</h3><p>Información sobre aparcamiento, transporte y acceso al lugar.</p></article>
-          <article><h3>Dress code</h3><p>Próximamente añadiremos las indicaciones de vestimenta.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="regalo">
-      <div class="wrap">
-        <div class="gift-box">
-          <p class="eyebrow">Un detalle de corazón</p>
-          <h2>Regalo</h2>
-          <p>El mejor regalo es poder compartir nuestro día con vosotros. Más adelante añadiremos aquí la información que queramos compartir.</p>
-        </div>
+      <div class="wrap section-heading">
+        <h2>Confirma tu asistencia</h2>
+        <p>Por favor, responde antes del <time datetime="2027-07-31">31 de julio de 2027</time>. Completa una confirmación por persona.</p>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeebEXEQDC6nk2bkUVZjhktCci7nBRdQmJw1t-4HDD3So008g/viewform" target="_blank" rel="noopener noreferrer">Confirmar asistencia</a>
       </div>
     </section>
   </main>
@@ -295,11 +282,11 @@
     <div class="footer-logo"><img src="logo-oficial.webp" alt="Logo de Silvia i Miguel"></div>
     <h2>Silvia i Miguel</h2>
     <p>11 · 09 · 2027 · Valencia</p>
-    <p>Gracias por acompañarnos ♡</p>
+    <p>Gracias por acompañarnos</p>
   </footer>
 
   <script>
-    const weddingDate = new Date('2027-09-11T00:00:00+02:00');
+    const weddingDate = new Date('2027-09-11T12:00:00+02:00');
     function updateCountdown(){
       const diff = Math.max(0, weddingDate - new Date());
       document.getElementById('days').textContent = Math.floor(diff / 86400000);
